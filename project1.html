@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="project1_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--we make the top level entity which is the div here  -->
+    <div class="container"> 
+        <!-- ismein just hume background color set karna hai  -->
+        <!-- make 3 divs inside this div class -->
+        
+        <h1>PASSWORD GENERATOR</h1>
+        
+        <div class="display-container">
+            <input placeholder="Password"  class="display" name="" id="" readonly data-passwordDisplay>  
+            <!--readonly isliye kyuki hum mark nahi kar sakte readonly hai sirf-->
+            <button data-copy class="copyBtn">
+                <span class="tooltip" data-copyMsg></span>
+                <img src="copyimg.png" alt="copy" width="23" height="23">
+            </button>
+        </div>
+        <div class="input-container">
+            <div class="length-container">
+                <p>Password Length</p>
+                <!-- 2nd thing is the number which is 0 at starting  -->
+                 <p data-lengthNumber>0</p>   <!--it will change acc to the data-->
+            </div>
+            <!-- now we have to make a slider  -->
+            <input class="slider" type="range" min="1" max="20" step="1" data-lengthSlider>
+             <!-- step 1 means that slider 1 1 step se agge piche hona chaiye -->
+              <!-- custom attribute dena marji hoti hai but custom attribute tabhi diya jata hai jabb javascript lagi hui ho -->
+               <!-- so i give also here the custom attribute that is the  -->
+            <div class="check">
+                <input type="checkbox" id="uppercase">
+                <label for="uppercase">Includes Upper case letters</label>
+            </div>
+            <div class="check">
+                <input type="checkbox" id="lowercase">
+                <label for="lowercase">Includes Lower case letter</label>
+            </div>
+            <div class="check">
+                <input type="checkbox" id="numbers">
+                <label for="numbers">Includes Number</label>
+            </div>
+            <div class="check">
+                <input type="checkbox" id="symbols">
+                <label for="symbols">Includes Symbols</label>
+            </div>
+            <div class="strength-container">
+                <p>Strength</p>
+                <div data-indicator class="indicator"></div>  <!--this div is also accessed by the javascript code so we can give it a custom attribute-->
+            </div>
+            <button class="generateButton">Generate Password</button>
+        </div>
+    </div>
+    <script src="project1_js.js"></script>
+</body>
+</html>
